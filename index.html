@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Management Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <h1>🎓 Student Management</h1>
+      <p>Manage your students easily</p>
+    </header>
+
+    <!-- Stats Cards -->
+    <div class="stats-container">
+      <div class="card">
+        <h3>Total Students</h3>
+        <p id="total-students">0</p>
+      </div>
+      <div class="card">
+        <h3>Male Students</h3>
+        <p id="male-students">0</p>
+      </div>
+      <div class="card">
+        <h3>Female Students</h3>
+        <p id="female-students">0</p>
+      </div>
+    </div>
+
+    <!-- Form Section -->
+    <div class="form-section">
+      <h2>Add Student</h2>
+      <form id="student-form">
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="text" id="course" placeholder="Course" required>
+        <select id="gender" required>
+          <option value="">Select Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+        <button type="submit">Add Student</button>
+      </form>
+    </div>
+
+    <!-- Search Section -->
+    <div class="search-section">
+      <input type="text" id="search" placeholder="🔍 Search student by name..." onkeyup="filterStudents()">
+    </div>
+
+    <!-- Table Section -->
+    <div class="table-section">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Course</th>
+            <th>Gender</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="student-list">
+          <!-- Data will be loaded here -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
